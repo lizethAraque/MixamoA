@@ -49,6 +49,7 @@
         var camera, scene, renderer, light;
         var clock = new THREE.Clock();
         var mixers = [];
+        var mixers2 = [];
         init();
         animate();
 
@@ -91,11 +92,29 @@
             scene.add(grid);
 
 
+            //var loader3 = new THREE.FBXLoader();
+            //loader3.load('models/Guitar.fbx', function(object3) {
+              //  object3.mixer2 = new THREE.AnimationMixer(object3);
+               // mixers2.push(object3.mixer2);
+                //var action = object3.mixer2.clipAction(object3.animations[0]);
+                //action.play();
+                //object3.traverse(function(child) {
+                  //  if (child.isMesh) {
+                      //  child.castShadow = true;
+                    //    child.receiveShadow = true;
+                    //}
+               // });
+                //object3.scale.set(0.2, 0.2, 0.2);
+                //object3.position.set(3,1,1);
+               // object3.Name = 'monkey';
+                //scene.add(object3);
+
+           // });
             
            
 
             var loader2 = new THREE.FBXLoader();
-            loader2.load('models/MonkeyDance.fbx', function(object2) {
+            loader2.load('models/MonkeyDance1.fbx', function(object2) {
                 object2.mixer = new THREE.AnimationMixer(object2);
                 mixers.push(object2.mixer);
                 var action = object2.mixer.clipAction(object2.animations[0]);
@@ -114,9 +133,6 @@
             // model two
 
             var objeto = scene.getObjectByName("monkey");
-
-
-
 
 
             scene.add(objeto);
